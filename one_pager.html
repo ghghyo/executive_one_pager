@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNovaTime One-Pager</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #1a1a2e;
+            color: #e2e8f0;
+            line-height: 1.15;
+            margin: 0;
+            padding: 0;
+        }
+        .one-pager-container {
+            max-width: 8.5in;
+            height: 11in;
+            margin: 0 auto;
+            background: #2a2a4e;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            padding: 0.2in;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+        .header-section {
+            background: linear-gradient(135deg, #1E86FF, #0f3460);
+            border-radius: 10px 10px 0 0;
+            padding: 0.75rem;
+            position: relative;
+            z-index: 10;
+            margin: -0.2in -0.2in 0;
+            text-align: center;
+        }
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .logo-box {
+            width: 50px;
+            height: 50px;
+            background-color: #1a1a2e;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #1E86FF;
+            box-shadow: 0 0 8px rgba(30, 134, 255, 0.5);
+        }
+        .company-name {
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: white;
+            margin-top: 0.4rem;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 0.4rem;
+            color: white;
+            font-size: 0.6rem;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.15rem;
+        }
+        .elevator-pitch {
+            font-size: 0.7rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 0.6rem;
+            padding: 0 0.4rem;
+            line-height: 1.1;
+        }
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 0.6rem;
+            padding-top: 0.6rem;
+        }
+        .left-column {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            min-height: 100%;
+        }
+        .right-column {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            min-height: 100%;
+        }
+        .info-card {
+            background-color: #1a1a2e;
+            border-radius: 6px;
+            padding: 0.5rem;
+            border: 1px solid #3d3d66;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            height: fit-content;
+        }
+        .info-card:hover {
+            border-color: #1E86FF;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 6px rgba(30, 134, 255, 0.2);
+        }
+        .card-title {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.3rem;
+            border-bottom: 1px solid #3d3d66;
+            padding-bottom: 0.15rem;
+            text-transform: uppercase;
+        }
+        .card-content {
+            font-size: 0.65rem;
+            color: #b2b2d1;
+            line-height: 1.25;
+        }
+        .team-member {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            margin-bottom: 0.3rem;
+        }
+        .team-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #3d3d66;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .team-details {
+            display: flex;
+            flex-direction: column;
+        }
+        .member-name {
+            font-weight: 600;
+            color: white;
+            font-size: 0.7rem;
+        }
+        .member-role {
+            font-size: 0.55rem;
+            color: #b2b2d1;
+        }
+        .content-group {
+            margin-bottom: 0.5rem;
+        }
+        .content-group-title {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: white;
+        }
+        .list-item {
+            margin-top: 0.15rem;
+            font-size: 0.65rem;
+            color: #b2b2d1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="one-pager-container">
+    <div class="header-section">
+        <div class="header-content">
+            <div class="logo-box">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="w-8 h-8" role="img" aria-labelledby="logoTitle logoDesc">
+                    <title id="logoTitle">TechNovaTime Logo</title>
+                    <desc id="logoDesc">A hexagonal network with a central medical cross, in gradient blue.</desc>
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#E9F5FF"></stop>
+                            <stop offset="100%" stop-color="#1E86FF"></stop>
+                        </linearGradient>
+                    </defs>
+                    <path d="M100,10 L177.94,55 L177.94,145 L100,190 L22.06,145 L22.06,55 Z" fill="none" stroke="url(#logoGradient)" stroke-width="20" stroke-linejoin="round" stroke-linecap="round"></path>
+                    <rect x="65" y="90" width="70" height="20" rx="5" fill="url(#logoGradient)"></rect>
+                    <rect x="90" y="65" width="20" height="70" rx="5" fill="url(#logoGradient)"></rect>
+                </svg>
+            </div>
+            <h1 class="company-name">TechNovaTime</h1>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-user"></i>
+                    <span>Youssef Abubaker</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>youssef@technovatime.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+1 (201) 238-3970</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <span>www.technovatime.com</span>
+                </div>
+            </div>
+            <p class="elevator-pitch">
+                We help providers unlock more revenue by automating the time-draining, yet necessary process of verifying benefits and charges over the phone. Our AI-powered voice agents navigate insurance and integrate with existing systems to recommend complex benefits and procedures, prevent denials, and deliver it in real-time.
+            </p>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="left-column">
+            <!-- Stage and Company Info Card -->
+            <div class="info-card">
+                <h2 class="card-title">COMPANY STATS</h2>
+                <div class="card-content">
+                    <div class="content-group">
+                        <span class="font-semibold text-white">Stage:</span> Pre-Seed
+                    </div>
+                    <div class="content-group">
+                        <span class="font-semibold text-white">Number of employees:</span> 5
+                    </div>
+                    <div class="content-group">
+                        <span class="font-semibold text-white">Market size:</span> $120B
+                    </div>
+                    <div class="content-group">
+                        <span class="font-semibold text-white">Investment opportunity:</span> $4M
+                    </div>
+                    <div class="content-group">
+                        <span class="font-semibold text-white">Use of funds:</span> Commercialize software and compliance, develop new AI agents for additional workflows (e.g., payment posting, medical coding), and expand market reach
+                    </div>
+                </div>
+            </div>
+
+            <!-- Management Team -->
+            <div class="info-card">
+                <h2 class="card-title">MANAGEMENT TEAM</h2>
+                <div class="card-content">
+                    <div class="team-member">
+                        <img src="244.jpg" alt="Youssef Abubaker" class="team-image" style="object-position: top;">
+                        <div class="team-details">
+                            <span class="member-name">Youssef Abubaker</span>
+                            <span class="member-role">Founder, CEO</span>
+                            <span class="text-xs text-gray-400">U.S. Air Force veteran who built the first Intelligence Community LLM, scaling it from 0 to tens of thousands of users. Holds advanced degrees in Data Science and Operations Research with proven technical leadership in healthcare.</span>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="246.jpg" alt="Andrew Gelbard" class="team-image" style="object-position: center;">
+                        <div class="team-details">
+                            <span class="member-name">Andrew Gelbard</span>
+                            <span class="member-role">COO</span>
+                            <span class="text-xs text-gray-400">U.S. Air Force veteran and award-winning data scientist with advanced training in AI and Operations Research. Known for deploying data-driven solutions that transformed defense and commercial decision-making.</span>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="247.jpg" alt="Cameron Cubra" class="team-image" style="object-position: center;">
+                        <div class="team-details">
+                            <span class="member-name">Cameron Cubra</span>
+                            <span class="member-role">CTO</span>
+                            <span class="text-xs text-gray-400">MIT Sloan graduate and U.S. Air Force veteran specializing in deep learning, computer vision, and simulation. Led teams delivering large-scale AI systems that saved time and improved defense and healthcare outcomes.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Current Status -->
+            <div class="info-card">
+                <h2 class="card-title">CURRENT STATUS</h2>
+                <div class="card-content">
+                    <p>TechNovaTime is working with 15 dental locations, with customer validation of our MVP. We have generated <b>$74,000</b> in revenue and secured <b>$150,000</b> in non-dilutive grant funding and <b>$220,000</b> from Techstars. Our pilot program demonstrates tangible value in as little as 14 days, with a speedy integration process to get customers up and running quickly.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-column">
+            <!-- Challenge -->
+            <div class="info-card">
+                <h2 class="card-title">CHALLENGE</h2>
+                <div class="card-content">
+                    <p>The healthcare industry faces a massive <b>$262 billion</b> annual crisis from claim denials and delayed payments, a problem driven by complex, manual administrative processes and a shrinking workforce. These inefficiencies result in lost revenue, administrative burden, and poor patient experiences.</p>
+                </div>
+            </div>
+
+            <!-- Solution -->
+            <div class="info-card">
+                <h2 class="card-title">SOLUTION</h2>
+                <div class="card-content">
+                    <p>We are building AI-powered voice agents that act as supercharged virtual staff. Our agents handle up to <b>3x</b> the call volume of human teams, integrate directly with EMR and payer systems, and reduce administrative costs by tens of thousands of dollars monthly. We help providers recover revenue, faster, and at lower cost.</p>
+                </div>
+            </div>
+            
+            <!-- Market -->
+            <div class="info-card">
+                <h2 class="card-title">MARKET</h2>
+                <div class="card-content">
+                    <p>We are targeting the <b>$120 billion</b> U.S. healthcare revenue cycle management market. Within this, claim denials alone represent a <b>$262 billion</b> annual problem. By focusing on this pain point, we aim to capture a significant share of the market, with a long-term vision of becoming a <b>$3 billion</b> company.</p>
+                </div>
+            </div>
+
+            <!-- Milestones -->
+            <div class="info-card">
+                <h2 class="card-title">MILESTONES</h2>
+                <div class="card-content">
+                    <ul class="list-disc list-inside">
+                        <li><b>Q4 2025:</b> Achieve 90%+ automated verification for our first 10 insurance providers.</li>
+                        <li><b>Q1 2026:</b> Expand AI agent coverage to new workflows like claim status and prior authorizations.</li>
+                        <li><b>Ongoing:</b> Continuous monitoring and performance tuning to maintain high accuracy and ROI.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Revenue Model -->
+            <div class="info-card">
+                <h2 class="card-title">REVENUE MODEL</h2>
+                <div class="card-content">
+                    <p>We charge <b>$5</b> per successful call. This transparent model ensures a clear ROI, with providers seeing the accuracy result in a <b>15%</b> month over month improvement in claim denial rates.</p>
+                </div>
+            </div>
+
+            <!-- Competitive Advantage -->
+            <div class="info-card">
+                <h2 class="card-title">COMPETITIVE ADVANTAGE</h2>
+                <div class="card-content">
+                    <ul class="list-disc list-inside">
+                        <li><b>Technology Edge:</b> We have the most talented engineers when engineers are hard to come by. Payers have made it harder for AI agents to retrieve information, therefore leveling the playing field between us and old competitors.</li>
+                        <li><b>Speedy Integration:</b> We can deploy pilots and demonstrate tangible value much faster than competitors.</li>
+                        <li><b>No Techstack Change:</b> Providers do not need to move to a new tech stack, minimizing technology risk.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Exit -->
+            <div class="info-card">
+                <h2 class="card-title">EXIT</h2>
+                <div class="card-content">
+                    <p>Our long-term vision is to become the leading AI-RCM company by automating the entire revenue cycle. This positions us as a prime acquisition target for large healthcare technology companies, private equity firms specializing in health tech, or major electronic health record (EHR) providers looking to enhance their core offerings.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
