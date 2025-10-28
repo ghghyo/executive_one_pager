@@ -10,25 +10,22 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            background: #1a1a2e;
+            background: #2a2a4e;
             color: #e2e8f0;
             line-height: 1.15;
             margin: 0;
             padding: 0;
         }
         .one-pager-container {
-            max-width: 8.5in;
-            height: 11.9in;
-            margin: 0 auto;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
             background: #2a2a4e;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
             padding: 0.2in;
             box-sizing: border-box;
-            border-radius: 10px;
         }
         .header-section {
             background: linear-gradient(135deg, #1E86FF, #0f3460);
-            border-radius: 10px 10px 0 0;
             padding: 0.8rem;
             position: relative;
             z-index: 10;
@@ -81,17 +78,11 @@
         }
         .main-content {
             display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: 0.8rem;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0.7rem;
             padding-top: 0.8rem;
         }
-        .left-column {
-            display: flex;
-            flex-direction: column;
-            gap: 0.6rem;
-            min-height: 100%;
-        }
-        .right-column {
+        .column {
             display: flex;
             flex-direction: column;
             gap: 0.6rem;
@@ -132,13 +123,13 @@
             margin-bottom: 0.5rem;
         }
         .team-image {
-            width: 90px;
-            height: 90px;
+            width: 110px;
+            height: 110px;
             border-radius: 50%;
             background-color: #3d3d66;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            object-fit: cover;
+            object-position: center;
+            flex-shrink: 0;
         }
         .team-details {
             display: flex;
@@ -214,7 +205,8 @@
     </div>
 
     <div class="main-content">
-        <div class="left-column">
+        <!-- Column 1 -->
+        <div class="column">
             <!-- Stage and Company Info Card -->
             <div class="info-card">
                 <h2 class="card-title">COMPANY STATS</h2>
@@ -250,7 +242,7 @@
                         </div>
                     </div>
                     <div class="team-member">
-                        <img src="246.jpg" alt="Andrew Gelbard" class="team-image" style="object-position: center;">
+                        <img src="246.jpg" alt="Andrew Gelbard" class="team-image" style="object-position: center top;">
                         <div class="team-details">
                             <span class="member-name">Andrew Gelbard</span>
                             <span class="member-role">Co-founder, COO</span>
@@ -267,17 +259,10 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Current Status -->
-            <div class="info-card">
-                <h2 class="card-title">CURRENT STATUS</h2>
-                <div class="card-content">
-                    <p> TNT is deployed at 215 ambulatory care facilities. To date, we've generated <b>$228K</b> in CAR, secured <b>$150K</b> in non‑dilutive grant funding, and raised <b>$220K</b> through Techstars. Our pilot program delivers proven value within just 14 days, enabled by a frictionless integration process that brings customers live almost immediately.</p>
-                </div>
-            </div>
         </div>
 
-        <div class="right-column">
+        <!-- Column 2 -->
+        <div class="column">
             <!-- Challenge -->
             <div class="info-card">
                 <h2 class="card-title">CHALLENGE</h2>
@@ -290,15 +275,15 @@
             <div class="info-card">
                 <h2 class="card-title">SOLUTION</h2>
                 <div class="card-content">
-                    <p>We’re building automation that observes how staff work and quietly creates workflows in the background. It tracks repetitive admin tasks across EMRs and payer portals—recognizing patterns and executing them automatically. From eligibility checks to claim follow-ups, TNT turns manual clicks and calls into continuous revenue recovery.</p>
+                    <p>We're building automation that observes how staff work and quietly creates workflows in the background. It tracks repetitive admin tasks across EMRs and payer portals—recognizing patterns and executing them automatically. From eligibility checks to claim follow-ups, TNT turns manual clicks and calls into continuous revenue recovery.</p>
                 </div>
             </div>
-            
+
             <!-- Market -->
             <div class="info-card">
                 <h2 class="card-title">MARKET</h2>
                 <div class="card-content">
-                    <p>We’re targeting the $120B U.S. Revenue Cycle Management market, starting with the $262B lost each year to claim denials and expanding into prior authorizations, claim status, and payment posting. Our initial focus is dental and ambulatory care, where verification and rework exceed $52B — building toward a $3B+ company by automating the most manual parts of the revenue cycle.</p>
+                    <p>We're targeting the $120B U.S. Revenue Cycle Management market, starting with the $262B lost each year to claim denials and expanding into prior authorizations, claim status, and payment posting. Our initial focus is dental and ambulatory care, where verification and rework exceed $52B — building toward a $3B+ company by automating the most manual parts of the revenue cycle.</p>
                 </div>
             </div>
 
@@ -313,7 +298,10 @@
                     </ul>
                 </div>
             </div>
-            
+        </div>
+
+        <!-- Column 3 -->
+        <div class="column">
             <!-- Revenue Model -->
             <div class="info-card">
                 <h2 class="card-title">REVENUE MODEL</h2>
@@ -333,6 +321,14 @@
                     </ul>
                 </div>
             </div>
+
+            <!-- Current Status -->
+            <div class="info-card">
+                <h2 class="card-title">CURRENT STATUS</h2>
+                <div class="card-content">
+                    <p> TNT is deployed at 215 ambulatory care facilities. To date, we've generated <b>$74K</b> in revenue, secured <b>$150K</b> in non‑dilutive grant funding, and raised <b>$220K</b> through Techstars. Our pilot program delivers proven value within just 14 days, enabled by a frictionless integration process that brings customers live almost immediately.</p>
+                </div>
+            </div>
             
             <!-- Exit -->
             <div class="info-card">
@@ -347,4 +343,3 @@
 
 </body>
 </html>
-
